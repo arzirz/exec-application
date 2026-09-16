@@ -11,6 +11,27 @@
 </head>
 <body>
 
+<!-- WINDOW CHROME -->
+<div class="window-bar">
+  <div class="traffic">
+    <span class="dot red"></span>
+    <span class="dot yellow"></span>
+    <span class="dot green"></span>
+  </div>
+  <div class="nav-arrows">
+    <span>&#8592;</span>
+    <span>&#8594;</span>
+  </div>
+  <div class="title-pill">
+    <span class="mini-avatar">as</span>
+    <span>arzi's server</span>
+  </div>
+  <div class="right-icons">
+    <span title="Inbox">&#9744;</span>
+    <span title="Help">?</span>
+  </div>
+</div>
+
 <div class="mobile-bar">
   <button id="openSidebar" aria-label="Open channels">☰</button>
   <span class="hash" style="color:var(--icon);font-size:18px;">#</span>
@@ -33,10 +54,22 @@
   <!-- CHANNEL SIDEBAR -->
   <nav class="channel-sidebar" id="channelSidebar">
     <div class="server-header">
-      arzi's server <span class="chev">▾</span>
+      <span>arzi's server</span>
+      <div class="server-header-icons">
+        <span class="chev">▾</span>
+      </div>
     </div>
+
+    <div class="rail-links">
+      <a class="rail-link" href="#"><span class="rl-icon">📅</span> Events</a>
+      <a class="rail-link" href="#"><span class="rl-icon">🚀</span> Server Boosts</a>
+    </div>
+
     <div class="channel-list" aria-label="Channels">
-      <div class="category-label">Text Channels</div>
+      <div class="category-label">
+        <span>Text Channels</span>
+        <span class="cat-plus">+</span>
+      </div>
       <a class="channel-item" href="index.html">
         <span class="hash">#</span> home
       </a>
@@ -49,6 +82,14 @@
       <a class="channel-item" href="vision.html" aria-current="true">
         <span class="hash">#</span> vision
       </a>
+
+      <div class="category-label" style="margin-top:16px;">
+        <span>Voice Channels</span>
+        <span class="cat-plus">+</span>
+      </div>
+      <div class="channel-item voice-item">
+        <span class="hash">🔊</span> General
+      </div>
     </div>
     <div class="user-footer">
       <div class="user-avatar">AR</div>
@@ -65,6 +106,16 @@
       <span class="hash">#</span>
       <span class="cname">vision</span>
       <span class="topic">where this is all headed</span>
+      <div class="top-bar-icons">
+        <span class="tb-icon" title="Threads">🧵</span>
+        <span class="tb-icon" title="Notifications">🔔</span>
+        <span class="tb-icon" title="Pinned messages">📌</span>
+        <span class="tb-icon" title="Members">👥</span>
+        <div class="search-box">
+          <span>Search my server</span>
+          <span class="search-icon">🔍</span>
+        </div>
+      </div>
     </div>
 
     <div class="chat-scroll">
@@ -111,11 +162,16 @@
     <div class="glabel">ONLINE — 2</div>
     <div class="member">
       <div class="mav">AR</div>
-      <div><span class="mname">alex</span><span class="mrole">👑</span></div>
+      <div class="mtext">
+        <div><span class="mname">alex</span><span class="mrole">👑</span></div>
+        <div class="mstatus">🎵 building this site</div>
+      </div>
     </div>
     <div class="member">
       <div class="mav bot">🎵</div>
-      <div><span class="mname">Playlist</span><span class="mtag">APP</span></div>
+      <div class="mtext">
+        <div><span class="mname">Playlist</span><span class="mtag">APP</span></div>
+      </div>
     </div>
   </aside>
 
