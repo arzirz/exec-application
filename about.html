@@ -1,10 +1,278 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>About</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>arzi's server</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ginto:wght@400;500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>About Me</h1>
-    <p>This is my about page.</p>
+
+<div class="mobile-bar">
+  <button id="openSidebar" aria-label="Open channels">☰</button>
+  <span class="hash" style="color:var(--icon);font-size:18px;">#</span>
+  <span class="mcname" id="mobileChannelName">home</span>
+</div>
+
+<div class="sidebar-overlay" id="overlay"></div>
+
+<div class="app">
+
+  <!-- SERVER RAIL -->
+  <nav class="server-rail" aria-label="Servers">
+    <div class="server-icon active" title="arzi's server">AR</div>
+    <div class="server-divider"></div>
+    <div class="server-icon" title="other server">🎬</div>
+    <div class="server-icon" title="other server">🏆</div>
+    <div class="server-icon" title="other server">🧋</div>
+  </nav>
+
+  <!-- CHANNEL SIDEBAR -->
+  <nav class="channel-sidebar" id="channelSidebar">
+    <div class="server-header">
+      arzi's server <span class="chev">▾</span>
+    </div>
+    <div class="channel-list" role="tablist" aria-label="Channels">
+      <div class="category-label">Text Channels</div>
+      <button class="channel-item" role="tab" data-target="home" aria-current="true">
+        <span class="hash">#</span> home
+      </button>
+      <button class="channel-item" role="tab" data-target="about">
+        <span class="hash">#</span> about-me
+      </button>
+      <button class="channel-item" role="tab" data-target="vision">
+        <span class="hash">#</span> vision
+      </button>
+      <button class="channel-item" role="tab" data-target="projects">
+        <span class="hash">#</span> projects
+      </button>
+      <button class="channel-item" role="tab" data-target="connect">
+        <span class="hash">#</span> connect
+      </button>
+    </div>
+    <div class="user-footer">
+      <div class="user-avatar">AR</div>
+      <div>
+        <div class="uname">alex</div>
+        <div class="ustatus">Online</div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <div class="main">
+    <div class="top-bar">
+      <span class="hash">#</span>
+      <span class="cname" id="topChannelName">home</span>
+      <span class="topic" id="topChannelTopic">the front page of my personal server</span>
+    </div>
+
+    <div class="chat-scroll">
+
+      <!-- HOME -->
+      <section class="panel active" id="panel-home">
+        <div class="channel-intro">
+          <div class="big-hash">#</div>
+          <h1>Welcome to #home!</h1>
+          <p>This is the start of Alex's personal server. Everything about me lives in the channels on the left.</p>
+        </div>
+
+        <div class="day-divider">16 SEPTEMBER 2026</div>
+
+        <div class="message">
+          <div class="msg-avatar">AR</div>
+          <div class="msg-body">
+            <div class="msg-head">
+              <span class="msg-name">alex</span>
+              <span class="msg-badge">OWNER</span>
+              <span class="msg-time">Today at 3:16 PM</span>
+            </div>
+            <div class="msg-text">
+              <p>hey — I'm Alex. this server is basically my personal site, laid out like channels.</p>
+              <p>drop into <a href="#" data-jump="about">#about-me</a> for the basics, <a href="#" data-jump="vision">#vision</a> for where I'm headed, or <a href="#" data-jump="projects">#projects</a> to see what I'm building.</p>
+              <div class="embed">
+                <div class="e-title">right now</div>
+                <div class="e-desc">Heads-down on a new project, based in Sydney, drinking too much coffee.</div>
+                <div class="e-field">
+                  <div class="fk">STATUS</div>
+                  <div class="fv">🟢 open to chat</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="panel" id="panel-about">
+        <div class="channel-intro">
+          <div class="big-hash">#</div>
+          <h1>Welcome to #about-me!</h1>
+          <p>This is the start of the #about-me channel.</p>
+        </div>
+
+        <div class="day-divider">16 SEPTEMBER 2026</div>
+
+        <div class="message">
+          <div class="msg-avatar">AR</div>
+          <div class="msg-body">
+            <div class="msg-head">
+              <span class="msg-name">alex</span>
+              <span class="msg-badge">OWNER</span>
+              <span class="msg-time">Today at 3:17 PM</span>
+            </div>
+            <div class="msg-text">
+              <p>a short bio goes here — where you're from, what you do, and what makes you, you. two or three sentences is plenty.</p>
+              <p>grew up in ___, studied ___, currently working on ___.</p>
+              <div class="embed">
+                <div class="e-field">
+                  <div class="fk">BASED IN</div>
+                  <div class="fv">Sydney, Australia</div>
+                </div>
+                <div class="e-field">
+                  <div class="fk">CURRENTLY</div>
+                  <div class="fv">role / company / focus</div>
+                </div>
+                <div class="e-field">
+                  <div class="fk">INTO</div>
+                  <div class="fv">
+                    <span class="pill-tag">interest one</span>
+                    <span class="pill-tag">interest two</span>
+                    <span class="pill-tag">interest three</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VISION -->
+      <section class="panel" id="panel-vision">
+        <div class="channel-intro">
+          <div class="big-hash">#</div>
+          <h1>Welcome to #vision!</h1>
+          <p>This is the start of the #vision channel.</p>
+        </div>
+
+        <div class="day-divider">16 SEPTEMBER 2026</div>
+
+        <div class="message">
+          <div class="msg-avatar">AR</div>
+          <div class="msg-body">
+            <div class="msg-head">
+              <span class="msg-name">alex</span>
+              <span class="msg-badge">OWNER</span>
+              <span class="msg-time">Today at 3:18 PM</span>
+            </div>
+            <div class="msg-text">
+              <p>the bigger picture — not a resume, just a direction.</p>
+              <ul>
+                <li><strong>this year:</strong> replace with a concrete goal you're working toward in the next 12 months.</li>
+                <li><strong>longer term:</strong> the direction you want your work or life to move in over the next few years.</li>
+                <li><strong>why:</strong> the belief underneath it — what you're optimizing for and why it matters.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="panel" id="panel-projects">
+        <div class="channel-intro">
+          <div class="big-hash">#</div>
+          <h1>Welcome to #projects!</h1>
+          <p>This is the start of the #projects channel.</p>
+        </div>
+
+        <div class="day-divider">16 SEPTEMBER 2026</div>
+
+        <div class="message">
+          <div class="msg-avatar">AR</div>
+          <div class="msg-body">
+            <div class="msg-head">
+              <span class="msg-name">alex</span>
+              <span class="msg-badge">OWNER</span>
+              <span class="msg-time">Today at 3:19 PM</span>
+            </div>
+            <div class="msg-text">
+              <p>a few things I've been building:</p>
+              <div class="embed">
+                <div class="e-title">Project one — 2026</div>
+                <div class="e-desc">One or two sentences on what it is, what you used to build it, and a link if you have one.</div>
+              </div>
+              <div class="embed">
+                <div class="e-title">Project two — 2025</div>
+                <div class="e-desc">Same shape — name, short description, and what it taught you or why it mattered.</div>
+              </div>
+              <div class="embed">
+                <div class="e-title">Project three — 2025</div>
+                <div class="e-desc">Add as many of these as you like by copying this embed block.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONNECT -->
+      <section class="panel" id="panel-connect">
+        <div class="channel-intro">
+          <div class="big-hash">#</div>
+          <h1>Welcome to #connect!</h1>
+          <p>This is the start of the #connect channel.</p>
+        </div>
+
+        <div class="day-divider">16 SEPTEMBER 2026</div>
+
+        <div class="message">
+          <div class="msg-avatar">AR</div>
+          <div class="msg-body">
+            <div class="msg-head">
+              <span class="msg-name">alex</span>
+              <span class="msg-badge">OWNER</span>
+              <span class="msg-time">Today at 3:20 PM</span>
+            </div>
+            <div class="msg-text">
+              <p>easiest ways to reach me:</p>
+              <div>
+                <a class="link-embed" href="mailto:you@example.com"><span><span class="plat">EMAIL</span>you@example.com</span></a>
+                <a class="link-embed" href="#"><span><span class="plat">GITHUB</span>@yourhandle</span></a>
+                <a class="link-embed" href="#"><span><span class="plat">INSTAGRAM / X</span>@yourhandle</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="composer">
+      <div class="composer-box">
+        <span id="composerPlaceholder">Message #home</span>
+        <span class="composer-icons">🎁 GIF 😊</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEMBERS -->
+  <aside class="members">
+    <div class="glabel">ONLINE — 2</div>
+    <div class="member">
+      <div class="mav">AR</div>
+      <div><span class="mname">alex</span><span class="mrole">👑</span></div>
+    </div>
+    <div class="member">
+      <div class="mav bot">🎵</div>
+      <div><span class="mname">Playlist</span><span class="mtag">APP</span></div>
+    </div>
+  </aside>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
